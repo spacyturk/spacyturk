@@ -8,7 +8,7 @@ spaCyTurk is a library providing trained [spaCy](https://spacy.io) models for Tu
 
 The floret vectors were trained on the deduplicated version of [OSCAR-2109](https://oscar-corpus.com/post/oscar-v21-09/) Turkish corpus. The sentence segmented (non-Turkish sentences were removed) and tokenized final corpus has a size of 30GB and 4327M tokens.
 
-For more details, see the ***[article](https://medium.com/p/b3c516c1570f)*** describing the parameter selection and evaluation process.
+For more details, see the ***[article](https://medium.com/@bediiaydogan/training-floret-vectors-for-turkish-b3c516c1570f?source=friends_link&sk=fdb74dcf19a83a98a3284f41430a4462)*** describing the parameter selection and evaluation process.
 
 >**training parameters:** model=cbow, dim=300, minn=4, maxn=6, hashCount=2, minCount=5, ws=5, neg=10, lr=0.05, epoch=5
 
