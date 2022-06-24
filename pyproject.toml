@@ -1,0 +1,35 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spacyturk"
+version = "0.1.0"
+description = "spaCyTurk - trained spaCy models for Turkish"
+readme = "README.md"
+authors = [{ name = "Bedii A. Aydoğan", email = "spacyturk@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["nlp", "spacy", "turkish", "floret", "fasttext"]
+dependencies = [
+    "spacy >= 3.2.0",
+]
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+build = ["build", "twine"]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/spacyturk/spacyturk"
+Repository = "https://github.com/spacyturk/spacyturk"
+
+[project.scripts]
+spacyturk = "spacyturk.__main__:main"
+
+[tool.setuptools]
+packages = ["spacyturk"]

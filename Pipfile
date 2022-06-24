@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+spacy = "==3.3.0"
+
+[dev-packages]
+spacy-huggingface-hub = "*"
+pytest = "*"
+build = "*"
+twine = "*"
+
+[requires]
+python_version = "3.8"
