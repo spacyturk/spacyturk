@@ -25,8 +25,8 @@ def download(model: str) -> None:
         if model not in models:
             models = ', '.join(models)
             msg = Printer()
-            msg.warn(f' Model "{model}" does not exist.')
-            msg.warn(f' Available models: {models}')
+            msg.fail(f'Model "{model}" does not exist.')
+            msg.fail(f'Available models: {models}')
             return
 
         # first try to install compatible version
@@ -90,5 +90,5 @@ def _conn_fail_msg() -> None:
     """Prints connection failed message.
     """
     msg = Printer()
-    msg.warn(' Connection to Hugging Face Hub failed.')
-    msg.warn(' Please try again or make sure your Internet connection is on.')
+    msg.fail('Connection to Hugging Face Hub failed.')
+    msg.fail('Please try again or make sure your Internet connection is on.')
