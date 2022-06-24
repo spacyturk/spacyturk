@@ -28,7 +28,7 @@ def download(model: str) -> None:
             msg.warn(f' Model "{model}" does not exist.')
             msg.warn(f' Available models: {models}')
             return
-        
+
         # first try to install compatible version
         # if it fails, install the latest version
         try:
@@ -58,7 +58,7 @@ def info() -> None:
         for pkg_name in util.get_installed_models():
             package = pkg_name.replace("-", "_")
             if package in models_st:
-                models[package] = util.get_package_version(pkg_name)    
+                models[package] = util.get_package_version(pkg_name)
 
         data = {
             "spaCyTurk version": pkg.__version__,
@@ -70,7 +70,7 @@ def info() -> None:
         }
 
         msg = Printer()
-        msg.table(data, title='"Info about spaCyTurk"')
+        msg.table(data, title='Info about spaCyTurk')
     except:
         _conn_fail_msg()
 
@@ -88,7 +88,7 @@ def _fetch_model_names() -> List[str]:
 
 def _conn_fail_msg() -> None:
     """Prints connection failed message.
-    """ 
+    """
     msg = Printer()
     msg.warn(' Connection to Hugging Face Hub failed.')
     msg.warn(' Please try again or make sure your Internet connection is on.')

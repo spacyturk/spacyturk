@@ -11,6 +11,8 @@ spacy-huggingface-hub = "*"
 pytest = "*"
 build = "*"
 twine = "*"
+autopep8 = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.8"
