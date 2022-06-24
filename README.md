@@ -21,15 +21,15 @@ Model performances were evaluated in below downstream NLP tasks.
 * Offensive Language Identificaton, **OLI**
 * Movie Sentiment Analaysis, **MSA**
 
-
 | Vectors                         |  NER  |  POS  |  OLI  |  MSA  | Model Size |
 | --------------------------------| ----: | ----: | ----: | ----: | ---------: |
 | none                            | 90.19 | 82.60 | 61.07 | 75.63 |          - |
 | fastText (~3.4M vectors/keys)   | 92.36 | 92.49 | 69.83 | 75.62 |      4.1GB |
-| tr_floret_web_md (50K vectors)  | 92.87 | 93.02 | 73.55 | 76.98 |       60MB |
-| tr_floret_web_lg (200K vectors) | 93.05 | 93.51 | 74.00 | 77.28 |      240MB |
+| tr_floret_web_md (bucket 50K)   | 92.87 | 93.02 | 73.55 | 76.98 |       60MB |
+| tr_floret_web_lg (bucket 200K)  | 93.05 | 93.51 | 74.00 | 77.28 |      240MB |
 | BERT                            | 95.71 | 96.42 | 79.37 | 80.87 |      444MB |
 
+**Evaluation metrics:** micro f1-score for NER, accuracy for POS, macro f1-score for OLI and MSA.
 
 ### Installation & Usage
 
